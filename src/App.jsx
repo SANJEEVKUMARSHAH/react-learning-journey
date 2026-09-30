@@ -1,166 +1,38 @@
-// import React from 'react'
-// import { useState } from 'react'
-
-// function Hi(){
-//   let user="sanjeev"
-//   return<div> 
-// <h1> hi {user} welcome to react session </h1>
-//   </div>
-// }
-
-// export default Hi
+// // import React, { useState } from 'react'
 
 
-             // example 2
+// // const App = () => {
+// //   const [UserName, setUserName] = useState("ram")
+// //   return (
+// //     <div>
+// //       <button onClick={()=> setUserName("hanuman") } className=' px-3 oy-4 m-2  rounded bg-teal-700  text-white' > 
+// //         ChangeUser
+// //       </button>
 
-// import React from 'react'
-// import { useState } from 'react'
+// //       <p> user = {UserName} </p>
+// //     </div>
+// //   )
+// // }
 
-// function App() {
-//   const [A, setA] = useState(0)
-//   const increment =()=>{ setA(A + 1)}
-//    const decrement =()=>{ setA(A - 1)}
-//   return (
-//     <div>
-//       <h1> hi play the game of increment and decrement , the value is  {A} </h1>
-//       <button onClick={increment} className='btn-i'> increment </button>
-//        <button onClick={decrement} className='btn-ii'> Decrement </button>
-//     </div>
-//   )
-// }
-
-// export default App
+// // export default App
 
 
-            // example 3
-
-
-// import React , {useState} from 'react'
-
-// const User = ()=>{
-//   const [user, setuser] = useState("Ram");
-//   return <div> 
-//     <h1> hi {user} welcome to Tech Lakshya Yt Channel </h1>
-//     <button onClick={()=>setuser("Sanjeev")}  className='btn-i'> Change User </button>
-//   </div>
-// }
-
-// export default User
-
-
-                // example 4
-
-// import React, { useState } from 'react'
-
-// const User = () => {
-//   const [user, setUser] = useState("Ram")
-
-//   const ChangeUser = () => {
-//     setUser("Sanjeev")
-//   }
-
-//   return (
-//     <div>
-//       <h1>Hi {user}, welcome to Tech Lakshya YT Channel</h1>
-
-//       <button onClick={ChangeUser} className="btn-i">
-//         Change User
-//       </button>
-//     </div>
-//   )
-// }
-
-// export default User
-
-
-                      // example -> 5 Learn Conditional Rendering  🧠🧠
-
-// import React, { useState } from "react";
-
-// const App = () => {
-//   const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-//   return (
-//     <div>
-//       {isLoggedIn ? (
-//         <h1>Welcome Sanjeev</h1>
-//       ) : (
-//         <h1>Please Login</h1>
-//       )}
-
-//       <button onClick={() => setIsLoggedIn(!isLoggedIn)} className="btn-i">
-//         Login / Logout
-//       </button>
-//     </div>
-//   );
-// };
-
-// export default App;
-
-
-             // example -6 => 2 button for conditional handling  ✅  ( log in / log out button )
-
-// import React, { useState } from 'react'
-
-// const user = "Ram"
-
-// const App = () => {
-//   const [login, setLogin] = useState(true)
-
-//   return (
-//     <div>
-//       {login ? ( <h1>Welcome {user}</h1> ) : ( <h1>Please login first</h1>  )}
-
-//       <button onClick={() => setLogin(true)}  className="btn-i" > Log in  </button>
-//       <button onClick={() => setLogin(false)}  className="btn-ii" > Log out  </button>
-//     </div>
-//   )
-// }
-
-// export default App
-
-                       // example -7 ( dark mode / light mode )
 
 
 // import React, { useState } from 'react'
 
 // const App = () => {
-//   const [light, setLight] = useState(true)
-
+//   const [value, setvalue] = useState(0)
 //   return (
-//     <div
-//       style={{
-//         minHeight: '100vh',
-//         padding: '40px',
-//         backgroundColor: light ? 'white' : 'black',
-//         color: light ? 'black' : 'white',
-//         textAlign: 'center',
-//         transition: '0.3s'
-//       }}
-//     >
-//       {/* Heading */}
-//       <h1>
-//         {light ? '☀️ Light Mode is ON' : '🌙 Dark Mode is ON'}
-//       </h1>
-
-//       <p>
-//         Current mode: {light ? 'Light' : 'Dark'}
+//     <div flex items-center >
+//       <p className=' text-center py-10 m-10 rounded bg-pink-700 text-3xl text-white' >
+//         Value is {value}
 //       </p>
 
-//       {/* Buttons */}
-//       <button
-//         onClick={() => setLight(true)}
-//         className="btn-i"
-//       >
-//         ☀️ Light Mode
-//       </button>
+//       <button onClick={()=>setvalue(value+1)} className='px-10  ml-70 py-5 m-10 border-white-300 rounded text-xl text-white bg-orange-950 '> Increment  </button>
+//        <button onClick={()=>setvalue(value-1)} className='px-10 ml-30 py-5 m-10 border-white-300 rounded text-xl text-white  bg-blue-950 '> Decrement  </button>
 
-//       <button
-//         onClick={() => setLight(false)}
-//         className="btn-ii"
-//       >
-//         🌙 Dark Mode
-//       </button>
+
 //     </div>
 //   )
 // }
@@ -169,524 +41,325 @@
 
 
 
-                         // Rendering Lists with map() ✅
-            // array as a string
+
 
 // import React from 'react'
+// import Navbar from './Components/Navbar'
 
 // const App = () => {
-//   const users = ["Ram", "Sanjeev", "Hari", "Shyam"]
 //   return (
 //     <div>
-// {
-
-// users.map((user)=> <h2 key={user}> {user} </h2>)
-
-// }
-//     </div>
-//   )
-// }
-
-// export default App
-
-
-                // json format type
-
-// import React from 'react'
-
-// const App = () => {
-//   const users = [
-//     { name: "Ram", age: 20 },
-//    { name: "Sanjeev", age: 20 },
-//     { name: "Hari", age: 21 },
-//     { name: "Shyam", age: 19 }
-//   ]
-//   return (
-//     <div>
-// {  users.map((user) => <div key={user.name} > 
-//   <h1> Name:  {user.name} </h1> 
-//   <p> Age:  {user.age} </p> 
-//   </div>
-//   ) }
-//     </div>
-//   )
-// }
-// export default App
-  
-
-                             // next examples ✅
-
-// import React from 'react'
-
-// function App() {
-//   const students = [
-//     {
-//       id: 1,
-//       name: "Sanjeev",
-//       department: "Computer Engineering",
-//       gpa: 3.62
-//     },
-//     {
-//       id: 2,
-//       name: "Ram",
-//       department: "Electrical Engineering",
-//       gpa: 3.45
-//     },
-//     {
-//       id: 3,
-//       name: "Hari",
-//       department: "Mechanical Engineering",
-//       gpa: 3.80
-//     }
-//   ]
-
-//   return (
-//     <div>
-//       {students.map((student) => (
-//         <div key={student.id}>
-//           <h1>{student.name}</h1>
-//           <p>{student.department}</p>
-//           <p>GPA: {student.gpa}</p>
-//         </div>
-//       ))}
-//     </div>
-//   )
-// }
-
-// export default App
-
-
-
-                          // props ✅✅
-        // Props = properties/data passed from a parent component to a child component. 🙌🙌
-  
-// import React from 'react'
-
-//                     // Child
-// const StudentCard = (props) => {
-//   return (
-//     <div>
-//       <h2>{props.name}</h2>
-//       <p>{props.department}</p>
-//       <p>GPA: {props.gpa}</p>
-//     </div>
-//   )
-// }
-
-//      //    Parent
-// const App = () => {
-//   return (
-//     <div>
-//       <StudentCard
-//         name="Sanjeev"
-//         department="Computer Engineering"
-//         gpa={3.62}
-//       />
-
-//       <StudentCard
-//         name="Ram"
-//         department="Electrical Engineering"
-//         gpa={3.45}
-//       />
-
-//       <StudentCard
-//         name="Hari"
-//         department="Mechanical Engineering"
-//         gpa={3.80}
-//       />
-//     </div>
-//   )
-// }
-
-// export default App
-
-                              // using props 🔥
-// import React from "react";
-//       // child is acquiring property from parent 
-// const StudentCard = (props) => {
-//   return <div> 
-//   <h1> {props.name} </h1>
-//   <h1>{ props.department} </h1>
-//   <h1> {props.gpa }</h1>
-//           </div>
-// }
-
-
-//          // parent is sending their property to child through props
-// const App = ()=> {
-
-//   return <div> 
-//  <StudentCard 
-//  name="sanjeev"
-//  department="computer engg"
-//  gpa = {3.98}
-//  />
-
-//  <StudentCard 
-//  name="Ram"
-//  department="civil engg"
-//  gpa = {3.89}
- 
-// />
-
-//  <StudentCard 
-//  name="Hanuman"
-//  department="mechanical engg"
-//  gpa = {3.88}
- 
-// />
-
-//  <StudentCard 
-//  name="Sita "
-//  department="electrical engg"
-//  gpa = {3.87}
- 
-// />
-
-//   </div>
-//  }
-
-// export default App
-
-
-
-                  //  Option 2 — Destructuring ⭐
-
-//                   import React from 'react'
-
-//                             const Studentcard = ({name,department,gpa}) => {
-//                     return <div> 
-// <h1> {name}  </h1>
-// <h2> {department}  </h2>
-// <h3> {gpa}  </h3>
-//                     </div>
-
-//                   }
-
-                  
-//                   function App() {
-//                     return (
-//                       <div>
-// <Studentcard
-// name = "sanjeev"
-// department ="compueter engineering "
-// gpa= {4.00}
-// />
-
-// <Studentcard
-// name = "Ram"
-// department ="electrical  engineering "
-// gpa= {3.90}
-// />
-
-// <Studentcard
-// name = "hanuman"
-// department ="mechanical  engineering "
-// gpa= {3.97}
-// />
-
-//                       </div>
-//                     )
-//                   }
-                  
-
-        
-
-
-//       export default App
-
-
-      // NOTE => 
-      //   For a React component, use an UPPERCASE first letter.
-      //   React treats lowercase JSX names as HTML elements.
-
-
-
-                    // form  in react ✅✅✅
-
-// import React, { useState } from 'react'
-
-// const App = () => {
-
-//   const [formData, setFormData] = useState({
-//     name: "",
-//     email: "",
-//     password: ""
-//   })
-
-//   const handleChange = (e) => {
-
-//     const { name, value } = e.target
-
-//     setFormData({
-//       ...formData,
-//       [name]: value
-//     })
-//   }
-
-//   const handleSubmit = (e) => {
-
-//     e.preventDefault()
-
-//     console.log(formData)
-//   }
-
-//   return (
-//     <div>
-
-//       <h1>Registration Form</h1>
-
-//       <form onSubmit={handleSubmit}>
-
-//         <input
-//           type="text"
-//           name="name"
-//           placeholder="Enter your name"
-//           value={formData.name}
-//           onChange={handleChange}
-//         />
-
-//         <br />
-
-//         <input
-//           type="email"
-//           name="email"
-//           placeholder="Enter your email"
-//           value={formData.email}
-//           onChange={handleChange}
-//         />
-
-//         <br />
-
-//         <input
-//           type="password"
-//           name="password"
-//           placeholder="Enter your password"
-//           value={formData.password}
-//           onChange={handleChange}
-//         />
-
-//         <br />
-
-//         <button type="submit">
-//           Register
-//         </button>
-
-//       </form>
-
-//     </div>
-//   )
-// }
-
-// export default App
-
-                           // self ✅✅
-
-// import React , {useState} from 'react'
-
-// const App = () => {
-//   const submitHandler = (e) => {
-//     e.preventDefault();
-//     console.log("submitted");
-//   }
-//   return (
-//     <div>
-//   <form onSubmit={(e)=> { submitHandler(e)}}>
-//   <input type='text' placeholder='enter your name' required />
-// <button className="btn-i">
-//   Submit
-// </button>
-    
-    
-//    </form>
-
-//     </div>
-//   )
-// }
-
-// export default App
-
-
-                                   // use state se kaise kare isse ✅  ( 2 way binding )
-
-// import React, { useState } from 'react'
-
-// const App = () => {
-
-//   const [name, setName] = useState("")
-
-//   const submitHandler = (e) => {
-//     e.preventDefault()
-//     console.log(name)
-//   }
-
-//   return (
-//     <div>
-//       <form
-//         onSubmit={submitHandler}
-//         className="flex gap-4 p-10 m-5"
-//       >
-
-//         <input
-//           type="text"
-//           placeholder="Enter your name"
-//           value={name}
-//           onChange={(e) => setName(e.target.value)}
-//           required
-//           className="px-5 py-3 border border-gray-400 rounded"
-//         />
-
-//         <button
-//           type="submit"
-//           className="px-8 py-3 w-22 text-xl rounded bg-red-500 text-white"
-//         >
-//           Submit
-//         </button>
-
-//       </form>
-//     </div>
-//   )
-// }
-
-// export default App
-
-
-
-                             // FRAGMENTS IN REACT ✅✅
-
-  // import React,{useState} from 'react'
-
-  // function App() {
-  //   let name="sanjeev";
-  //   const [age, setage] = useState(21)
-  //   const [count, setcount] = useState(0)
-  //   return (
-  //     <>  
-  //     <h1> hi , i am {name}</h1>
-  //     <h2> my age is {age} </h2>
-  //     <h4> play increment / decrement  game with me {count} </h4>
-  //     <button onClick={()=> setcount(count + 1 )}  className='btn-i'> INcrement </button>
-  //     <button onClick={()=> setcount(count - 1 )}  className='btn-ii'> Decrement </button>
-      
-  //     </>
-  //   )
-  // }
-  
-  // export default App
-
-                             // Components ✅✅
-// for this , make a folder inside src with components name then make a file inside it with first letter capital and export it . 
-//   after this, import that particular folder into App.jsx and use it with the exact foldername like a html tags .
-
-
-// import Navbar from './components/Navbar'
-// import Footer from './components/Footer'
-
-// const App = () => {
-//   return (
-//     <>
 //       <Navbar />
-//       <Footer />
-//     </>
+//       <Navbar /> 
+//     </div>
 //   )
 // }
 
 // export default App
 
 
-                                     // props ( properties ) ✅✅ 
-  // under components folder, make a folder name Card.jsx
-  // let us use that Card as a html tag
 
-//  import React from 'react'
-//  import Card from './components/Card'
 
-//  const App = () => {
-//   const num = 10;
-//    return (
-//      <div>
-// {/* <Card> a={num} </Card>    // this is wrong ❌, Pass the prop inside the opening tag: */}
+// import React from 'react'
+// import Card from './Components/Card'
 
-// {/* <Card a={num}>  </Card>    // method -1 ✅✅ */}
+// const App = () => {
+//   return (
+//     <div>
+// <p className='text-black'> hi i am sanjeev </p>
+// <Card name="Ram" className=" text-black text-2xl font-semibold " /> 
 
-// <Card a={num} / > 
-//      </div>
-//    )
-//  }
- 
-//  export default App
+//     </div>
+//   )
+// }
+
+// export default App
 
 
 
-                      // examples -> Json File ✅✅   ( best and better )
+// import React from 'react'
+// import Card from './Components/Card'
 
-//  import React from 'react'
-// import Card from './components/Card'
+// const App = () => {
+//   return (
+//     <div className="min-h-screen bg-gray-100 p-10">
+
+//       <h1 className="mb-8 text-center text-4xl font-bold">
+//         User Cards
+//       </h1>
+
+//       <div className="flex flex-wrap justify-center gap-6">
+
+//         <Card
+//           name="Sanjeev"
+//           profession="Web Developer"
+//           description="I am a computer engineering student learning React, Tailwind CSS and modern web development."
+//         />
+
+//         <Card
+//           name="Ram"
+//           profession="Software Engineer"
+//           description="I enjoy building useful software applications and learning new technologies every day."
+//         />
+
+//         <Card
+//           name="Hari"
+//           profession="UI/UX Designer"
+//           description="I love creating clean and user-friendly interfaces that provide a great experience."
+//         />
+
+//       </div>
+
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+
+
+// import React from 'react'
+// import Card from './Components/Card'
+
+// const App = () => {
+//   return (
+//     <div className="min-h-screen bg-gray-100 p-10">
+
+//       <h1 className="mb-8 text-center text-4xl font-bold">
+//         User Cards
+//       </h1>
+
+//       <div className="flex flex-wrap justify-center gap-6">
+
+//         <Card
+//           name="Sanjeev"
+//           profession="Web Developer"
+//           image="https://images.unsplash.com/photo-1500648767791-00dcc994a43e"
+//           description="I am a computer engineering student learning React, Tailwind CSS and modern web development."
+//         />
+
+//         <Card
+//           name="Ram"
+//           profession="Software Engineer"
+//           image="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d"
+//           description="I enjoy building useful software applications and learning new technologies every day."
+//         />
+
+//         <Card
+//           name="Hari"
+//           profession="UI/UX Designer"
+//           image="https://images.unsplash.com/photo-1494790108377-be9c29b29330"
+//           description="I love creating clean and user-friendly interfaces that provide a great experience."
+//         />
+
+//       </div>
+
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+                                       // form handling 
+  //  import React from 'react'
+   
+  //  const submitHandler =(e)=>{
+    
+  //   e.preventDefault();
+  //   console.log("submitted");
+    
+  //  }
+
+  //  const App = () => {
+  //    return (
+  //      <div> 
+  //     <form onSubmit={(e)=>{
+  //       submitHandler(e);
+  //     }}> 
+
+   
+  //  <input type='text' className='px-3 w-80 h-44 text-center py-2 m-3 text-black font-semibold border border-e-black shadow-blue-700 rounded ' placeholder='enter name' / > 
+  //   <button  className='px-2 rounded  py-3 m-1.5 text-2xl text-center text-black bg-pink-600'> Submit </button>
+
+
+  //     </form>
+     
+  //      </div>
+  //    )
+  //  }
+   
+  //  export default App
+
+
+                                        // 2 way binding ✅✅✅
+
+
+  //  import React, { useState } from 'react'
+   
+  //  const App = () => {
+  //   const [name, setname] = useState("")
+
+  //   const submitHandler =(e)=>{
+  //   e.preventDefault();
+  //   console.log("submitted");
+  //   console.log(name);
+    
+  //  }
+
+  //    return (
+  //      <div> 
+  //     <form onSubmit={submitHandler} > 
+  //  <input value={name} type='text' onChange={(e)=> setname(e.target.value)} className='px-3 w-80 h-44 text-center py-2 m-3 text-black font-semibold border border-e-black shadow-blue-700 rounded ' placeholder='enter name' / > 
+  //   <button  className='px-2 rounded  py-3 m-1.5 text-2xl text-center text-black bg-pink-600'> Submit </button>
+  //     </form>
+     
+  //      </div>
+  //    )
+  //  }
+   
+  //  export default App
+
+
+
+
+                            // 2 way binding ✅
+
+// import React, { useState } from 'react'
+
+
+// const App = () => {
+//   const [Name, setName] = useState("")   // Name=> " "  ( kux nahi hai initial value , only khaali string hai )
+//   const submitHandler=(e)=>
+//   {
+//     console.log("submitted");
+//     e.preventDefault();
+//     console.log(Name);
+    
+//   }
+//   return (
+//     <div>
+//   {/* <form onSubmit={submitHandler}> */}
+
+//    <form onSubmit={(e)=> submitHandler(e)}>
+//     <input  onChange={(e)=>setName(e.target.value)}  value={Name} type='text' className='px-3 py-3 m-2 text-black text-2xl font-semibold bg-blue-300 rounded border border-amber-700 ' ></input>
+//    <button className='px-3 py-3 m-2 text-2xl font-semibold bg-amber-600 rounded-2xl text-center  border-amber-900'> Submit </button>
+   
+//   </form>
+
+//     </div>   // fragments can be used also here instead of div
+//   )
+// }
+
+// export default App
+
+
+
+                       // conditional rendering 
+
+  // using if-else
+
+//     import React from 'react'
 
 // const App = () => {
 
-//   const users = [
-//     {
-//       id: 1,
-//       name: "Alex Johnson",
-//       age: 24,
-//       city: "New York",
-//       profilePhoto: "https://randomuser.me/api/portraits/men/32.jpg"
-//     },
-//     {
-//       id: 2,
-//       name: "Emily Carter",
-//       age: 22,
-//       city: "London",
-//       profilePhoto: "https://randomuser.me/api/portraits/women/44.jpg"
-//     },
-//     {
-//       id: 3,
-//       name: "Daniel Smith",
-//       age: 27,
-//       city: "Toronto",
-//       profilePhoto: "https://randomuser.me/api/portraits/men/46.jpg"
-//     },
-//     {
-//       id: 4,
-//       name: "Sophia Wilson",
-//       age: 25,
-//       city: "Sydney",
-//       profilePhoto: "https://randomuser.me/api/portraits/women/65.jpg"
-//     },
-//     {
-//       id: 5,
-//       name: "Michael Brown",
-//       age: 29,
-//       city: "Melbourne",
-//       profilePhoto: "https://randomuser.me/api/portraits/men/75.jpg"
-//     },
-//     {
-//       id: 6,
-//       name: "Olivia Davis",
-//       age: 23,
-//       city: "Paris",
-//       profilePhoto: "https://randomuser.me/api/portraits/women/68.jpg"
-//     }
-//   ]
+//   const isLoggedIn = true
+
+//   if (isLoggedIn) {
+//     return <h1>Welcome Sanjeev</h1>
+//   } else {
+//     return <h1>Please Login</h1>
+//   }
+
+// }
+
+// export default App
+
+
+
+                   // ternary operator conditional rendering
+
+// import React from 'react'
+
+// const App = () => {
+//     const isloggedin = true;
 
 //   return (
 //     <div>
-//       <div className="p-10">
-        
-//         {users.map((user) => {
+//     {
+//       (isloggedin)? (<h1> welcome </h1> ): (<h1> please login </h1>)
+//     }
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+
+                             // axios ( api calling tool )
+
+// import React, { useState } from 'react'
+// import axios from "axios"
+
+// const App = () => {
+
+//   const [data, setData] = useState([])
+
+//   const getData = async () => {
+//     const response = await axios.get("https://picsum.photos/v2/list")
+
+//     console.log(response.data)
+//     setData(response.data)
+//   }
+
+//   return (
+//     <div className="p-10">
+
+//       <button
+//         onClick={getData}
+//         className="bg-teal-700 text-white px-5 py-4 rounded"
+//       >
+//         Get Data
+//       </button>
+
+//       <div className="p-5 mt-5 bg-gray-950">
+
+//         {data.map(function (ele, idx) {
+
 //           return (
-//             <Card
-//               key={user.id}
-//               username={user.name}
-//               age={user.age}
-//               city={user.city}
-//               photo={user.profilePhoto}
-//             />
+//             <div
+//               key={idx}
+//               className="mb-5 bg-green-500 p-5"
+//             >
+
+//               <img
+//                 className="h-40"
+//                 src={ele.download_url}
+//                 alt={ele.author}
+//               />
+
+//  <h1 className="text-white text-xl">
+//                Name:  {ele.author}
+//               </h1>
+
+//               <h1 className="text-white text-xl">
+//                 Width: {ele.width}
+//               </h1>
+
+              
+//                <h1 className="text-white text-xl">
+//                 Height  {ele.height}
+//               </h1>
+
+//             </div>
 //           )
+
 //         })}
 
 //       </div>
+
 //     </div>
 //   )
 // }
@@ -694,137 +367,180 @@
 // export default App
 
 
-                                  // Axios ✅✅✅ 
-  // Axios is a JavaScript library used to send HTTP requests from your React app to a server/API.
-  // React app → Axios → API/server → data → React app
-
-      //   url of api is =>   https://picsum.photos/v2/list
-
-      // import React from 'react'
-      // import axios from 'axios';
-      // import { useState } from 'react';
-      
-      // const App = () => {
-      //   const [data, setdata] = useState([])
-      //   const getData = async ()=>{
-      //    const response =  await axios.get('https://picsum.photos/v2/list ');
-      //    console.log(response.data);            // use this to know what to do and how it can be done 
-      //       setdata(response.data)
-      //   }
-      //   return (
-      //     <div className='p-10'> 
-      //     <button onClick={getData} className='bg-teal-600 text-white py-3 px-5 m-3 rounded w-22' > Click Me </button>
-      //     <div className='p-5 mt-5 bg-gray-950'>   
-      //     {data.map(function ( ele, idx) 
-      //   {
-      //   return <div key={idx} className='bg-green'>
-      //     <img className='h-40' src= {ele.download_url}  /> 
-      //     <h1> {ele.author} </h1> 
-      //     </div>
+                                    // AXIOS CALLING PRActice
 
 
-      //   }  
-        
-      //   )}       
-          
-      //      </div>
-      //      </div>
-      //   )
-      // }
-      
-      // export default App
+// import React, { useState } from 'react'
+// import axios  from 'axios';
 
-              
-       
-                                 // useEffect in the above program ✅✅
-  // useEffect is a React Hook used when you want to perform a side effect in a component.
-  // Run some code automatically when the component loads or when something changes.
+// const App = () => {
 
-//  import React from 'react'
-//       import axios from 'axios';
-//       import { useState } from 'react';
-//       import { useEffect } from 'react';
-      
-//       const App = () => {
-//         const [data, setdata] = useState([])
-//         const getData = async ()=>{
-//          const response =  await axios.get('https://picsum.photos/v2/list ');
-//          console.log(response.data);
-//             setdata(response.data)
-//         }
+//   const [data, setdata] = useState([])
 
-//         useEffect(() => {
-//           getData()
-          
-//         }, [])
-        
-//         return (
-//           <div className='p-10'> 
-//           <button onClick={getData} className='bg-teal-600 text-white py-3 px-5 m-3 rounded w-22' > Click Me </button>
-//           <div className='p-5 mt-5 bg-gray-950'>   
-//           {data.map(function ( ele, idx) 
-//         {
-//         return <div key={idx} className='bg-green'>
-//           <img className='h-40' src= {ele.download_url}  /> 
-//           <h1> {ele.author} </h1> 
-//           </div>
+//   const getData = async ()=>{
+//  const response= await axios.get("https://picsum.photos/v2/list");
+
+//  console.log(response.data);
+//  setdata(response.data);
+
+//   }
+
+//   return (
+//     <div> 
+
+//    <button onClick={getData} className='px-3 py-4 m-3 rounded bg-black text-center text-white text-2xl font-semibold border shadow-blue-400 border-orange-600'> getData </button>
+
+//    <div> 
+
+//     { data.map(function(ele,idx)
+//     {
+//      return (
+//      <div key={ele.id}>
+//        <img src={ele.download_url} alt={ele.author} className='w-52 h-48 px-3 py-3 m-4 '/>
+//       <h1 className='px-3 py-3 m-4 text-blue-500 font-semibold'> name: {ele.author}  </h1>
+//       </div>
+
+//      )
+//     }
+//   )
+//   }
+//    </div>
 
 
-//         }  
-        
-//         )}       
-          
-//            </div>
-//            </div>
-//         )
-//       }
-      
-//       export default App
+//     </div>
+//   )
+// }
+
+// export default App
 
 
 
-                              // React Router ✅✅✅✅
-  // React Router is a library used to create multiple pages/routes 
-  // in a React application without reloading the browser.
+                         // react router ✅✅
 
-  // routing => In React, routing means showing different components/pages based on the URL, 
-                              // usually without reloading the whole webpage.
- 
-//       /         → Home page
-//   /about        → About page
-//   /products     → Products page
-//   /login        → Login page
 
-          // Install it:    =>    npm install react-router-dom  ✅
+              // this is causing problem ( refreshing) to tackle this, use another approach 
+
+// import React from 'react'
+
+// import Navbar from './Components/Navbar'
+// import About from './Components/Pages/About'
+// import Home from './Components/Pages/Home'
+// import Contact from '../Contact'
+// import Account from './Components/Pages/Account'
+// import Header from './Components/Header'
+// import { Link, Route, Routes } from 'react-router-dom'
+
+// const App = () => {
+//   return (
+//    <div>
+
+//       <Header />
+
+//       <Routes>
+//         <Route path="/" element={<Home />} />
+//         <Route path="/about" element={<About />} />
+//         <Route path="/account" element={<Account />} />
+//       </Routes>
+
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+
+// import React from 'react'
+// import { Routes, Route, Link } from 'react-router-dom'
+
+// import Home from './Components/Pages/Home'
+// import About from './Components/Pages/About'
+// import Account from './Components/Pages/Account'
+
+// const App = () => {
+//   return (
+//     <div>
+
+//       {/* Navbar */}
+//       <div className="py-7 px-10 bg-teal-800 text-white flex items-center justify-between">
+//         <h2 className="text-2xl">Sanjeev</h2>
+
+//         <div className="flex gap-10 text-lg">
+//           <Link to="/">Home</Link>
+//           <Link to="/about">About</Link>
+//           <Link to="/account">Account</Link>
+//         </div>
+//       </div>
+
+//       {/* Routes */}
+//       <Routes>
+//         <Route path="/" element={<Home />} />
+//         <Route path="/about" element={<About />} />
+//         <Route path="/account" element={<Account />} />
+//       </Routes>
+
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+
+// import React from 'react'
+// import { Routes, Route } from 'react-router-dom'
+
+// import Header from './Components/Header'
+
+// import Home from './Components/Pages/Home'
+// import About from './Components/Pages/About'
+// import Account from './Components/Pages/Account'
+
+// const App = () => {
+//   return (
+//     <div>
+
+//       <Header />
+
+//       <Routes>
+//         <Route path="/" element={<Home />} />
+//         <Route path="/about" element={<About />} />
+//         <Route path="/account" element={<Account />} />
+//       </Routes>
+
+//     </div>
+//   )
+// }
+
+// export default App
+
+
 
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
-import Product from './pages/Product'
-import About from './pages/About'
-import Contact from './pages/Contact'
-import Home from './pages/Home'
-import Header from './components/Header'
+import Home from './Components/Pages/Home'
+import About from './Components/Pages/About'
+import Contact from './Components/Pages/Contact'
+import Students from './Components/Pages/Students'
+import Header from './Components/Header/Header'
 
 
+const App = () => {
+  return (
+    <div>
 
-          const App = () => {
-            return (
-              <div>
-                <Header> </Header>
-           <Routes> 
-           <Route path='/' element={<Home/>}> </Route>
-           <Route path='/home' element={<Home/>}> </Route>
-           <Route path='/about' element={<About/>}> </Route>
-           <Route path='/product' element={<Product/>}> </Route>
-           <Route path='/contact' element={<Contact/>}> </Route>
+<Header />
 
-           </Routes>
+<Routes>
+<Route path='/' element={ <Home/ >} /> 
+<Route path='/about' element={ < About/ >} /> 
+<Route path='/contact' element={ <Contact/ >} /> 
+<Route path='/students' element={ <Students/ >} /> 
 
+</Routes>
 
+    </div>
+  )
+}
 
-
-              </div>
-            )
-          }
-          
-          export default App
+export default App
